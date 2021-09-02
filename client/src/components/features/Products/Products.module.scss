@@ -7,3 +7,38 @@
   justify-content: space-around;
   margin-bottom: ($base-size * 4);
 }
+
+.card {
+  width: 40%;
+  margin: ($base-size * 2);
+  a {
+    text-decoration: none;
+    color: $color-black;
+  }
+  a:hover {
+    color: $color-black;
+  }
+}
+
+.image {
+  height: 50vh;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 430px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 330px) {
+  .card {
+    width: 80%;
+  }
+}
