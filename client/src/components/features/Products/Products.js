@@ -11,7 +11,7 @@ const Products = ({ products }) => (
         <CardImg top width="100%" src={product.firstImage} alt="mugImg" className={styles.image} />
         <CardBody>
           <CardTitle tag="h4">{product.title}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Price: {products.price}$</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">Price: {product.price}$</CardSubtitle>
         </CardBody></a>
       </Card>
     )}

@@ -10,7 +10,7 @@ const MainMenu = () => (
         <NavbarBrand href="/" className={styles.title}>Mugshop</NavbarBrand>
         <Nav navbar className="ms-auto">
           <NavItem>
-            <NavLink href="/Cart" className="text-white">Cart</NavLink>
+            <NavLink href="/cart" className="text-white">Cart</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/formOrder" className="text-white">Finish your order</NavLink>

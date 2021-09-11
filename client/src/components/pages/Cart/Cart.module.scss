@@ -1,0 +1,97 @@
+@import '../../../styles/settings.scss';
+
+.cartContainer {
+  margin: ($base-size * 2) 0;
+}
+
+.cartEmpty {
+  font-weight: 600;
+  font-size: large;
+  text-transform: uppercase;
+  text-align: center;
+  margin: ($base-size * 3) 0;
+}
+
+.cartHeader {
+  padding: ($base-size / 2);
+  background-color: $color-beige;
+  display: flex;
+  div {
+    width: 10%;
+  }
+}
+
+.productName {
+  width: 40%!important;
+  display: flex;
+  align-items: center;
+}
+
+.productDescription {
+  width: 20%!important;
+  text-align: center;
+}
+
+.cartProduct {
+  border-bottom: 1px solid $color-beige;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  div {
+    width: 10%;
+  }
+}
+
+.image {
+  width: 24%!important;
+  height: 100px;
+  object-fit: cover;
+  padding: $base-size;
+}
+
+.cartAmount {
+  display: flex;
+  align-items: center;
+}
+
+.amount {
+  border: 1px solid $color-black;
+  height: ($base-size * 3);
+  width: ($base-size * 3)!important;
+  padding: ($base-size / 2);
+  margin: $base-size;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.amountButton {
+  height: ($base-size * 2);
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: ($base-size * 2);
+  color: $color-black;
+  cursor: pointer;
+}
+
+.row {
+  margin-top: ($base-size * 3)!important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rowButton {
+  justify-content: flex-end;
+  margin: ($base-size) 0 ($base-size * 3) 0!important;
+}
+
+.total {
+  font-weight: 500;
+  font-size: ($base-size * 2);
+}
+
+.price {
+  font-size: ($base-size * 3);
+  color: $color-orange;
+}

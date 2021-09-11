@@ -15,9 +15,11 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 const LOAD_PRODUCTS = createActionName('LOAD_PRODUCTS');
 const LOAD_PRODUCT_BYID = createActionName('LOAD_PRODUCT_BYID');
+const ADD_TO_CART = createActionName('ADD_TO_CART');
 
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
 export const loadProduct = payload => ({ payload, type: LOAD_PRODUCT_BYID });
+export const addToCart = payload => ({ payload, type: ADD_TO_CART });
 
 /* THUNKS */
 export const loadProductsRequest = () => {
@@ -47,6 +49,7 @@ export const loadProductRequest = (props) => {
 /* INITIAL STATE */
 const initialState = {
   data: [],
+  cart: [],
 };
 
 /* REDUCER */
@@ -56,6 +59,8 @@ export default function reducer(statePart = initialState, action = {}) {
       return { ...statePart, data: [...action.payload] };
     case LOAD_PRODUCT_BYID:
       return { ...statePart, data: [{...action.payload}] };
+    case ADD_TO_CART:
+      return { ...statePart, cart: [{...action.payload}] };
     default:
       return statePart;
   }

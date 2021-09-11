@@ -1,1 +1,94 @@
 @import '../../../styles/settings.scss';
+
+.root {
+  margin: ($base-size * 2);
+  padding: ($base-size * 3);
+  height: 84vh;
+}
+
+.row {
+  padding: ($base-size * 2);
+}
+
+.title {
+  text-align: center;
+  color: $color-nav;
+}
+
+.bigImage {
+  padding: ($base-size * 2);
+  height: 60vh;
+  object-fit: cover;
+}
+
+.smallImage {
+  height: 16vh;
+  width: 200px;
+  margin: ($base-size * 2);
+  object-fit: cover;
+}
+
+.description {
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: ($base-size * 2);
+  color: $color-black;
+}
+
+.input {
+  max-width: 40px;
+  max-height: 40px;
+  appearance: textfield;
+  margin: $base-size;
+  transform: translate(0, -20%);
+  border-radius: 4px;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@media(max-width: 1024px) {
+  .root {
+    height: 120vh;
+  }
+
+  .bigImage {
+    padding: ($base-size * 2);
+    height: 55vh;
+  }
+
+  .smallImage {
+    height: 22vh;
+  }
+
+  .row {
+    padding: $base-size;
+  }
+}
+
+@media(max-width: 425px) {
+  .root {
+    height: 140vh;
+  }
+
+  .bigImage {
+    padding: $base-size;
+    height: 55vh;
+  }
+
+  .smallImage {
+    height: 22vh;
+    margin: $base-size;
+  }
+
+  .row {
+    padding: $base-size;
+  }
+}
