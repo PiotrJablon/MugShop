@@ -91,3 +91,15 @@ export const removeItem = (id) => {
 export const calculateItemTotal = (price, amount) => {
   return price * amount;
 };
+
+export const calculateTotal = (cart) => {
+  const cartTotalPriceArray = [];
+  for (let i = 0; i < cart.length; i++) {
+    const itemTotalPrice = cart[i].price * cart[i].amount;
+    cartTotalPriceArray.push(itemTotalPrice);
+  }
+  const sum = cartTotalPriceArray.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  return sum;
+};

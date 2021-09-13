@@ -1,0 +1,54 @@
+@import '../../../styles/settings.scss';
+
+.formContainer {
+  margin: ($base-size * 4) auto;
+}
+
+.image {
+  height: ($base-size * 14);
+  object-fit: cover;
+}
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.formCard {
+  height: ($base-size * 22);
+  width: 28%;
+  margin: ($base-size * 2);
+}
+
+.formTotal {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: ($base-size * 2) 0;
+  width: 100%;
+  input {
+    margin: $base-size;
+  }
+}
+
+.street {
+  width: 60%;
+}
+
+.number {
+  width: 35.7%;
+}
+
+.zip {
+  width: 30%;
+}
+
+.city {
+  width: 65.7%;
+}

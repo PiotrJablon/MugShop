@@ -5,6 +5,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Home from './components/pages/Home/Home';
 import Product from './components/pages/Product/ProductContainer';
 import Cart from './components/pages/Cart/Cart';
+import FormOrder from './components/pages/FormOrder/FormOrder';
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Route path="/" exact component={Home} />
           <Route path="/product/:id" exact component={Product} />
           <Route path="/cart" exact component={Cart} />
+          <Route path="/formOrder" exact component={FormOrder} />
         </Switch>
       </MainLayout>
     );
