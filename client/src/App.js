@@ -5,7 +5,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Home from './components/pages/Home/Home';
 import Product from './components/pages/Product/ProductContainer';
 import Cart from './components/pages/Cart/Cart';
-import FormOrder from './components/pages/FormOrder/FormOrder';
+import FormOrder from './components/pages/FormOrder/FormOrderContainer';
 
 class App extends React.Component {
 

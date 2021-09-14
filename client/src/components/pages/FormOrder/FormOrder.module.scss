@@ -38,17 +38,55 @@
 }
 
 .street {
-  width: 60%;
+  width: 60%!important;
 }
 
 .number {
-  width: 35.7%;
+  width: 35.7%!important;
 }
 
 .zip {
-  width: 30%;
+  width: 30%!important;
 }
 
 .city {
-  width: 65.7%;
+  width: 65.7%!important;
+}
+
+.cartEmpty {
+  font-weight: 600;
+  font-size: large;
+  text-transform: uppercase;
+  text-align: center;
+  margin: ($base-size * 3) 0;
+}
+
+@media(max-width: 1024px) {
+  .number {
+    width: 34.8%!important;
+  }
+  
+  .city {
+    width: 64.8%!important;
+  }
+}
+
+@media(max-width: 768px) {
+  .number {
+    width: 33.1%!important;
+  }
+  
+  .city {
+    width: 63.1%!important;
+  }
+}
+
+@media(max-width: 425px) {
+  .number {
+    width: 28%!important;
+  }
+  
+  .city {
+    width: 58%!important;
+  }
 }

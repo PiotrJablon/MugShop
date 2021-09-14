@@ -21,6 +21,7 @@ export const addToStorage = (product) => {
   }
 
   localStorage.setItem('cart', JSON.stringify(items));
+  window.location.reload(true);
 };
 
 export const addAmount = (id) => {

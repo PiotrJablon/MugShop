@@ -3,22 +3,30 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Container  } from 'reactstr
 
 import styles from './MainMenu.module.scss';
 
-const MainMenu = () => (
-  <div>
-    <Navbar color="dark" dark expand="md">
-      <Container>
-        <NavbarBrand href="/" className={styles.title}>Mugshop</NavbarBrand>
-        <Nav navbar className="ms-auto">
-          <NavItem>
-            <NavLink href="/cart" className="text-white">Cart</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/formOrder" className="text-white">Finish your order</NavLink>
-          </NavItem>
-        </Nav>
-      </Container>
-    </Navbar>
-  </div>
-);
+const MainMenu = () => {
+  const cart = JSON.parse(localStorage.getItem('cart'));
+
+  return (
+    <div>
+      <Navbar color="dark" dark expand="md">
+        <Container>
+          <NavbarBrand href="/" className={styles.title}>Mugshop</NavbarBrand>
+          <Nav navbar className="ms-auto">
+            <NavItem>
+              <NavLink href="/cart" className={styles.cart}>Cart</NavLink>
+              {cart === null
+                ? <span className={styles.cartLength}>0</span>
+                : <span className={styles.cartLength}>{cart.length}</span>
+              }
+            </NavItem>
+            <NavItem>
+              <NavLink href="/formOrder" className={styles.order}>Finish your order</NavLink>
+            </NavItem>
+          </Nav>
+        </Container>
+      </Navbar>
+    </div>
+  );
+};
 
 export default MainMenu;

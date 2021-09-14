@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 const productsRoutes = require('./routes/products.routes');
+const ordersRoutes = require('./routes/orders.routes.js');
 
 app.use(express.static(path.join(__dirname, '/client/build')));
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/api', productsRoutes);
+app.use('/api', ordersRoutes);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/build/index.html'));
