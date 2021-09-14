@@ -1,4 +1,6 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+
 import thunk from 'redux-thunk';
 
 // import reducers
@@ -9,17 +11,10 @@ const rootReducer = combineReducers({
   products,
 });
 
-// devtools
-const devtools = process.env.NODE_ENV === 'test'
-  ? x => x
-  : window.__REDUX_DEVTOOLS_EXTENSION__
-      && window.__REDUX_DEVTOOLS_EXTENSION__();
-
 const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(thunk),
-    devtools,
+  composeWithDevTools(
+    applyMiddleware(thunk)
   )
 );
 
