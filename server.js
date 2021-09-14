@@ -17,6 +17,10 @@ const server = app.listen(process.env.PORT || 8000, () => {
 mongoose.connect('mongodb+srv://Pioter:l4y1SBvycWvRWJUp@cluster0.aseo1.mongodb.net/Mugshop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
+db.once('open', () => {
+  console.log('Connected to the database');
+});
+
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
