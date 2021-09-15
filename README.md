@@ -10,4 +10,4 @@ https://floating-shelf-46159.herokuapp.com
 
 ## Link to the last commit
 
-https://github.com/PiotrJablon/MugShop/commit/b3859c993d1bb460d1f253771f79e654f5b25aaa
+https://github.com/PiotrJablon/MugShop/commit/afa7c377b8e3b348eae988783cc25cfd8f7aa61d
